@@ -1,0 +1,339 @@
+@import "./fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  background: #c3bdb0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.nav {
+  padding: 18px 0;
+  background: #212121;
+}
+
+.nav__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+.nav__list-link {
+  font-weight: 400;
+  font-size: 20px;
+  color: #f0f0f0;
+}
+
+.nav__options {
+  display: flex;
+  align-items: center;
+  gap: 57px;
+}
+
+.poster {
+  min-height: 700px;
+  background: url("../images/poster.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.poster {
+  display: flex;
+}
+
+.poster__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.poster__content p {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  max-width: 920px;
+}
+
+.poster__content-options {
+  display: flex;
+  gap: 30px;
+  margin-top: 80px;
+}
+
+.poster__content-options button {
+  width: 255px;
+  height: 86px;
+  border: 1px solid white;
+  font-weight: 700;
+  font-size: 20px;
+  color: #f0f0f0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.poster__content-options button:hover {
+  background: #212121;
+}
+
+.products__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.products__content-item {
+  padding: 20px;
+  background: #dedad1;
+  border: 1px solid #212121;
+  position: relative;
+}
+
+.products {
+  padding-top: 80px;
+  padding-bottom: 180px;
+}
+
+.products__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products__content-item {
+  min-height: 532px;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.products__content-item h4 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #313131;
+  align-self: flex-start;
+  margin-top: 28px;
+  margin-bottom: 9px;
+}
+
+.products__content-item span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #939393;
+  align-self: flex-start;
+}
+
+.products__content-item-options {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.products__content-item-options p {
+  font-weight: 700;
+  font-size: 24px;
+  color: #212121;
+}
+
+.products__content-item-options button {
+  padding: 16px 26px;
+  border: 2px solid #212121;
+  font-weight: 700;
+  font-size: 16px;
+  color: #212121;
+  cursor: pointer;
+}
+.products__content-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.products__content-item svg {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  display: none;
+}
+/* =========== Делаем кликабельное сердце */
+
+/* [...] -если тип инпута чекбокс, то при его выборе свг меняет филл. */
+.products__content-item
+  input[type="checkbox"]:checked
+  ~ .products__content-item-info
+  svg
+  path {
+  fill: #212121;
+}
+.products__content-item-sale {
+  width: 122px;
+  height: 140px;
+  background: #212121;
+  position: absolute;
+  top: 0;
+  right: 0;
+  clip-path: polygon(0 0, 50% 0, 100% 50%, 100% 100%);
+}
+.products__content-item-sale span {
+  font-weight: 700;
+  font-size: 20px;
+  color: #f0f0f0;
+  font-family: "Oxygen";
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+.info__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.info__content p {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #212121;
+  max-width: 890px;
+}
+.info__content p:nth-of-type(2) {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #212121;
+  max-width: 100%;
+  font-family: "Oxygen";
+  margin-top: 44px;
+  margin-bottom: 95px;
+}
+.info__content-gallery {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+.info__content-gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.info {
+  padding-bottom: 180px;
+}
+.footer {
+  padding-top: 80px;
+  padding-bottom: 166px;
+  background: #141510;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+.footer__content-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__content-top h4 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #f0f0f0;
+  font-family: "Oxygen";
+}
+.footer__content-top label {
+  position: relative;
+  border: 1px solid #dedad1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 545px;
+  padding: 8px 20px;
+}
+.footer__content-top label input {
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Oxygen";
+  color: #dedad1;
+}
+.footer__content-top label input::placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  color: #dedad1;
+  opacity: 0.5;
+  font-family: "Oxygen";
+}
+.footer__content-top label svg {
+  width: 55px;
+  height: 43px;
+}
+.footer__content-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__content-bottom-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Oxygen";
+}
+.footer__content-bottom-links h4 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #dedad1;
+  margin-bottom: 8px;
+}
+.footer__content-bottom-link {
+  font-weight: 700;
+  font-size: 16px;
+  color: #dedad1;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.footer__content-bottom-link:hover {
+  opacity: 1;
+}
