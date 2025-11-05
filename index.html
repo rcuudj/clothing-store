@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/media.css">
     <title>Clothing-Store</title>
 </head>
 
@@ -12,6 +13,7 @@
 
     <header class="header">
         <nav class="nav">
+            <input type="checkbox" id="toggle">
             <div class="nav__content container">
                 <a href="" class="nav__logo">
                     <img src="./assets/icons/logo.svg" alt="">
@@ -32,7 +34,21 @@
                             BLOG
                         </a>
                     </li>
+                    <li class="none">
+                        <a href="" class="nav__options-link">
+                            <img src="./assets/icons/favorit.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="none">
+                        <a href="" class="nav__options-link">
+                            <img src="./assets/icons/cart.svg" alt="">
+                        </a>
+                    </li>
                 </ul>
+
+                <label for="toggle">
+                    <img src="./assets/icons/menu-svgrepo-com.svg" alt="">
+                </label>
 
                 <ul class="nav__options">
                     <li>
@@ -51,6 +67,7 @@
     </header>
 
     <main class="main">
+                
         <section class="poster">
             <div class="poster__content container">
                 <p>
@@ -63,17 +80,19 @@
                 </div>
             </div>
         </section>
-
+        
         <section class="products">
             <div class="products__content container">
                 <div class="products__content-item">
-                    <input type="checkbox" id="favorite 1">
+                    <input type="checkbox" id="favorit">
+
                     <div class="products__content-item-sale">
+
                         <span>40%</span>
                     </div>
+
                     <div class="products__content-item-info">
-                        <!-- label - делает своеобразную обертку для свг и активирует инпут, так как мы его с ним связали через айди. "favorite" -->
-                        <label for="favorite 1">
+                        <label for="favorit">
                             <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -81,81 +100,7 @@
                                     stroke="#212121" stroke-width="2" />
                             </svg>
                         </label>
-                        <img src="./assets/images/product.png" alt="">
-                        <h4>CHATEAU CAMBON</h4>
-                        <span>Beaujolals 2013</span>
 
-                        <div class="products__content-item-options">
-                            <p>$29.99</p>
-                            <button>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__content-item">
-                    <input type="checkbox" id="favorite 2">
-
-                    <div class="products__content-item-info">
-                        <!-- label - делает своеобразную обертку для свг и активирует инпут, так как мы его с ним связали через айди. "favorite" -->
-                        <label for="favorite 2">
-                            <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M33.125 1.75C39.5039 1.75 44.5 6.72598 44.5 13.125C44.5 17.0375 42.7444 20.6763 39.4521 24.7041C36.1489 28.7453 31.4042 33.0556 25.5908 38.3271L25.5889 38.3281L23 40.6846L20.4111 38.3281L20.4092 38.3271L18.2803 36.3936C13.4324 31.9818 9.43819 28.2402 6.54785 24.7041C3.25561 20.6763 1.5 17.0375 1.5 13.125C1.5 6.72598 6.49609 1.75 12.875 1.75C16.4876 1.75 19.9717 3.43679 22.2412 6.08105L23 6.96582L23.7588 6.08105C26.0283 3.43679 29.5124 1.75 33.125 1.75Z"
-                                    stroke="#212121" stroke-width="2" />
-                            </svg>
-                        </label>
-                        <img src="./assets/images/product2.png" alt="">
-                        <h4>CHATEAU CAMBON</h4>
-                        <span>Beaujolals 2013</span>
-
-                        <div class="products__content-item-options">
-                            <p>$39.99</p>
-                            <button>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__content-item">
-                    <input type="checkbox" id="favorite 3">
-
-                    <div class="products__content-item-info">
-                        <!-- label - делает своеобразную обертку для свг и активирует инпут, так как мы его с ним связали через айди. "favorite" -->
-                        <label for="favorite 3">
-                            <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M33.125 1.75C39.5039 1.75 44.5 6.72598 44.5 13.125C44.5 17.0375 42.7444 20.6763 39.4521 24.7041C36.1489 28.7453 31.4042 33.0556 25.5908 38.3271L25.5889 38.3281L23 40.6846L20.4111 38.3281L20.4092 38.3271L18.2803 36.3936C13.4324 31.9818 9.43819 28.2402 6.54785 24.7041C3.25561 20.6763 1.5 17.0375 1.5 13.125C1.5 6.72598 6.49609 1.75 12.875 1.75C16.4876 1.75 19.9717 3.43679 22.2412 6.08105L23 6.96582L23.7588 6.08105C26.0283 3.43679 29.5124 1.75 33.125 1.75Z"
-                                    stroke="#212121" stroke-width="2" />
-                            </svg>
-                        </label>
-                        <img src="./assets/images/product3.png" alt="">
-                        <h4>CHATEAU CAMBON</h4>
-                        <span>Beaujolals 2013</span>
-
-                        <div class="products__content-item-options">
-                            <p>$39.99</p>
-                            <button>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__content-item">
-                    <input type="checkbox" id="favorite 4">
-
-                    <div class="products__content-item-info">
-                        <!-- label - делает своеобразную обертку для свг и активирует инпут, так как мы его с ним связали через айди. "favorite" -->
-                        <label for="favorite 4">
-                            <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M33.125 1.75C39.5039 1.75 44.5 6.72598 44.5 13.125C44.5 17.0375 42.7444 20.6763 39.4521 24.7041C36.1489 28.7453 31.4042 33.0556 25.5908 38.3271L25.5889 38.3281L23 40.6846L20.4111 38.3281L20.4092 38.3271L18.2803 36.3936C13.4324 31.9818 9.43819 28.2402 6.54785 24.7041C3.25561 20.6763 1.5 17.0375 1.5 13.125C1.5 6.72598 6.49609 1.75 12.875 1.75C16.4876 1.75 19.9717 3.43679 22.2412 6.08105L23 6.96582L23.7588 6.08105C26.0283 3.43679 29.5124 1.75 33.125 1.75Z"
-                                    stroke="#212121" stroke-width="2" />
-                            </svg>
-                        </label>
                         <img src="./assets/images/product.png" alt="">
                         <h4>CHATEAU CAMBON</h4>
                         <span>Beaujolals 2013</span>
@@ -169,13 +114,9 @@
                     </div>
                 </div>
                 <div class="products__content-item">
-                    <input type="checkbox" id="favorite 5">
-                    <div class="products__content-item-sale">
-                        <span>40%</span>
-                    </div>
+                    <input type="checkbox" id="favorit1">
                     <div class="products__content-item-info">
-                        <!-- label - делает своеобразную обертку для свг и активирует инпут, так как мы его с ним связали через айди. "favorite" -->
-                        <label for="favorite 5">
+                        <label for="favorit1">
                             <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -183,12 +124,13 @@
                                     stroke="#212121" stroke-width="2" />
                             </svg>
                         </label>
-                        <img src="./assets/images/product2.png" alt="">
+
+                        <img src="./assets/images/product.png" alt="">
                         <h4>CHATEAU CAMBON</h4>
                         <span>Beaujolals 2013</span>
 
                         <div class="products__content-item-options">
-                            <p>$29.99</p>
+                            <p>$39.99</p>
                             <button>
                                 ADD TO CART
                             </button>
@@ -196,13 +138,9 @@
                     </div>
                 </div>
                 <div class="products__content-item">
-                    <input type="checkbox" id="favorite 6">
-                    <div class="products__content-item-sale">
-                        <span>40%</span>
-                    </div>
+                    <input type="checkbox" id="favorit2">
                     <div class="products__content-item-info">
-                        <!-- label - делает своеобразную обертку для свг и активирует инпут, так как мы его с ним связали через айди. "favorite" -->
-                        <label for="favorite 6">
+                        <label for="favorit2">
                             <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -210,46 +148,130 @@
                                     stroke="#212121" stroke-width="2" />
                             </svg>
                         </label>
-                        <img src="./assets/images/product3.png" alt="">
+
+                        <img src="./assets/images/product.png" alt="">
                         <h4>CHATEAU CAMBON</h4>
                         <span>Beaujolals 2013</span>
 
                         <div class="products__content-item-options">
-                            <p>$29.99</p>
+                            <p>$39.99</p>
                             <button>
                                 ADD TO CART
                             </button>
                         </div>
                     </div>
                 </div>
+                <div class="products__content-item">
+                    <input type="checkbox" id="favorit">
 
+                    <div class="products__content-item-sale">
+
+                        <span>40%</span>
+                    </div>
+
+                    <div class="products__content-item-info">
+                        <label for="favorit">
+                            <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M33.125 1.75C39.5039 1.75 44.5 6.72598 44.5 13.125C44.5 17.0375 42.7444 20.6763 39.4521 24.7041C36.1489 28.7453 31.4042 33.0556 25.5908 38.3271L25.5889 38.3281L23 40.6846L20.4111 38.3281L20.4092 38.3271L18.2803 36.3936C13.4324 31.9818 9.43819 28.2402 6.54785 24.7041C3.25561 20.6763 1.5 17.0375 1.5 13.125C1.5 6.72598 6.49609 1.75 12.875 1.75C16.4876 1.75 19.9717 3.43679 22.2412 6.08105L23 6.96582L23.7588 6.08105C26.0283 3.43679 29.5124 1.75 33.125 1.75Z"
+                                    stroke="#212121" stroke-width="2" />
+                            </svg>
+                        </label>
+
+                        <img src="./assets/images/product.png" alt="">
+                        <h4>CHATEAU CAMBON</h4>
+                        <span>Beaujolals 2013</span>
+
+                        <div class="products__content-item-options">
+                            <p>$39.99</p>
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__content-item">
+                    <input type="checkbox" id="favorit1">
+                    <div class="products__content-item-info">
+                        <label for="favorit1">
+                            <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M33.125 1.75C39.5039 1.75 44.5 6.72598 44.5 13.125C44.5 17.0375 42.7444 20.6763 39.4521 24.7041C36.1489 28.7453 31.4042 33.0556 25.5908 38.3271L25.5889 38.3281L23 40.6846L20.4111 38.3281L20.4092 38.3271L18.2803 36.3936C13.4324 31.9818 9.43819 28.2402 6.54785 24.7041C3.25561 20.6763 1.5 17.0375 1.5 13.125C1.5 6.72598 6.49609 1.75 12.875 1.75C16.4876 1.75 19.9717 3.43679 22.2412 6.08105L23 6.96582L23.7588 6.08105C26.0283 3.43679 29.5124 1.75 33.125 1.75Z"
+                                    stroke="#212121" stroke-width="2" />
+                            </svg>
+                        </label>
+
+                        <img src="./assets/images/product.png" alt="">
+                        <h4>CHATEAU CAMBON</h4>
+                        <span>Beaujolals 2013</span>
+
+                        <div class="products__content-item-options">
+                            <p>$39.99</p>
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__content-item">
+                    <input type="checkbox" id="favorit2">
+                    <div class="products__content-item-info">
+                        <label for="favorit2">
+                            <svg width="46" height="43" viewBox="0 0 46 43" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M33.125 1.75C39.5039 1.75 44.5 6.72598 44.5 13.125C44.5 17.0375 42.7444 20.6763 39.4521 24.7041C36.1489 28.7453 31.4042 33.0556 25.5908 38.3271L25.5889 38.3281L23 40.6846L20.4111 38.3281L20.4092 38.3271L18.2803 36.3936C13.4324 31.9818 9.43819 28.2402 6.54785 24.7041C3.25561 20.6763 1.5 17.0375 1.5 13.125C1.5 6.72598 6.49609 1.75 12.875 1.75C16.4876 1.75 19.9717 3.43679 22.2412 6.08105L23 6.96582L23.7588 6.08105C26.0283 3.43679 29.5124 1.75 33.125 1.75Z"
+                                    stroke="#212121" stroke-width="2" />
+                            </svg>
+                        </label>
+
+                        <img src="./assets/images/product.png" alt="">
+                        <h4>CHATEAU CAMBON</h4>
+                        <span>Beaujolals 2013</span>
+
+                        <div class="products__content-item-options">
+                            <p>$39.99</p>
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
+        
         <section class="info">
             <div class="info__content container">
-                <p>Our products undergo strict quality control at every stage of production.</p>
-                <p>We pay special attention to the quality of every item in our store.
+                <p>
+                    Our products undergo strict quality control at every stage of production.
+                </p>
+                <p>
+                    We pay special attention to the quality of every item in our store.
                     We use only carefully selected materials that ensure durability and comfort while wearing.
                     Every detail — from the stitching to the hardware — is thoroughly checked so that you receive a
-                    product that lasts long and continues to please you with its appearance and comfort.</p>
+                    product that lasts long and continues to please you with its appearance and comfort.
+                </p>
+
                 <div class="info__content-gallery">
-                    <img src="./assets/images/gallery1.png" width="540px" height="657px" alt="img">
+                    <img src="./assets/images/gallery1.png" alt="">
                     <div class="info__content-gallery-item">
-                        <img src="./assets/images/gallery2.png" width="540px" height="313px" alt="img">
-                        <img src="./assets/images/gallery3.png" width="540px" height="314px" alt="img">
+                        <img src="./assets/images/gallery2.png" alt="">
+                        <img src="./assets/images/gallery3.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
 
     </main>
+    <!-- 
     <footer class="footer">
         <div class="footer__content container">
             <div class="footer__content-top">
                 <h4>NEWSLETTER</h4>
                 <label for="">
-                    <input type="email" placeholder="Enter your email">
+                    <input type="text" placeholder="Enter your email">
                     <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M7.75 13.5625V44.5625C7.75 45.5902 8.15826 46.5758 8.88496 47.3025C9.61166 48.0292 10.5973 48.4375 11.625 48.4375H50.375C51.4027 48.4375 52.3883 48.0292 53.115 47.3025C53.8417 46.5758 54.25 45.5902 54.25 44.5625V13.5625H7.75ZM7.75 9.6875H54.25C55.2777 9.6875 56.2633 10.0958 56.99 10.8225C57.7167 11.5492 58.125 12.5348 58.125 13.5625V44.5625C58.125 46.6179 57.3085 48.5892 55.8551 50.0426C54.4017 51.496 52.4304 52.3125 50.375 52.3125H11.625C9.56957 52.3125 7.59833 51.496 6.14492 50.0426C4.69152 48.5892 3.875 46.6179 3.875 44.5625V13.5625C3.875 12.5348 4.28326 11.5492 5.00996 10.8225C5.73666 10.0958 6.72229 9.6875 7.75 9.6875Z"
@@ -260,49 +282,76 @@
                     </svg>
                 </label>
             </div>
+
             <div class="footer__content-bottom">
-                <ul class="footer__content-bottom-links">
+                <div class="footer__content-bottom-item">
                     <h4>ABOUT US</h4>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">About us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">Privacy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">Contact</a>
-                    </li>
-                </ul>
-                <ul class="footer__content-bottom-links">
+                    <ul>
+                        <li>
+                            <a href="">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__content-bottom-item">
                     <h4>CUSTOME CARE</h4>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">Delivery info</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">Payment</a>
-                    </li>
-                </ul>
-                <ul class="footer__content-bottom-links">
+                    <ul>
+                        <li>
+                            <a href="">
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Delivery info
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Payment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__content-bottom-item">
                     <h4>CONTACT</h4>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">OooTads</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">SemiSafd</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">shoploveweb.com</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__content-bottom-link">+47 95 23 321 00</a>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                OooTads
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                SemiSafd
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="email">
+                                shoploveweb.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                +47 95 23 321 00
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
