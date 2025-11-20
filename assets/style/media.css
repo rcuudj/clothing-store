@@ -51,7 +51,7 @@
     display: none;
   }
   .nav__content label {
-    display: block;
+    display: flex;
   }
   .nav__list {
     position: absolute;
