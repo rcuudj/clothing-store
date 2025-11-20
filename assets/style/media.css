@@ -50,7 +50,9 @@
   .nav__options {
     display: none;
   }
-
+  .nav__content label {
+    display: block;
+  }
   .nav__list {
     position: absolute;
     top: 100%;
